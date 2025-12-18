@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nocturn rp • Galerie d'images</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Nocturn rp</p>
+        <h1>Galerie d'images</h1>
+        <p class="subtitle">
+          Ajoutez vos fichiers dans le dossier <code>images/</code> du dépôt, ils
+          apparaîtront ici automatiquement. Cliquez sur une image pour l'ouvrir
+          dans un nouvel onglet.
+        </p>
+        <div class="status" data-status>Prêt à charger les images…</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery" aria-live="polite"></section>
+    </main>
+
+    <template id="image-card">
+      <a class="card" target="_blank" rel="noreferrer noopener">
+        <div class="card__image-wrapper">
+          <img loading="lazy" alt="" />
+        </div>
+        <div class="card__body">
+          <span class="card__name"></span>
+          <span class="card__cta">Ouvrir</span>
+        </div>
+      </a>
+    </template>
+
+    <footer class="footer">
+      <small>
+        Dossier surveillé : <code>images/</code>. Placez vos fichiers
+        <strong>.jpg</strong>, <strong>.png</strong>, <strong>.gif</strong> ou
+        <strong>.webp</strong> directement dans ce dossier.
+      </small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
